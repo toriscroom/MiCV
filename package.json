@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-    "engines": {
+  "engines": {
     "node": "20.x"
   },
   "dependencies": {
