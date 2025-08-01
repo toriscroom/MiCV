@@ -1,16 +1,23 @@
 // src/components/Profile.jsx
 import { profile } from '../data';
+import { useState, useEffect } from 'react';
 
 const Profile = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
   return (
     <section className="relative text-center my-10 overflow-hidden">
       {/* Fondo animado con gradientes */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-3xl transform -rotate-1 scale-105 opacity-50"></div>
       <div className="absolute inset-0 bg-gradient-to-tl from-green-50 via-blue-50 to-purple-50 rounded-3xl transform rotate-1 scale-105 opacity-30"></div>
 
-      <div className="relative z-10 p-8">
+      <div className={`relative z-10 p-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+
         {/* Avatar placeholder con gradiente */}
-        <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-2xl transform hover:scale-110 transition-transform duration-300 animate-pulse">
+        <div className="w-32 h-32 mx-auto mb-8 bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-2xl transform hover:scale-110 transition-transform duration-300">
           {profile.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
         </div>
 
@@ -25,6 +32,22 @@ const Profile = () => {
             <span className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-teal-400 to-blue-500 text-white rounded-full text-sm font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
               📍 {profile.location}
             </span>
+          </div>
+        </div>
+
+        {/* Estadísticas rápidas */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 border border-blue-200 hover:shadow-lg transition-shadow duration-300">
+            <div className="text-2xl font-bold text-blue-600">3+</div>
+            <div className="text-sm text-blue-700">Años de experiencia</div>
+          </div>
+          <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 border border-green-200 hover:shadow-lg transition-shadow duration-300">
+            <div className="text-2xl font-bold text-green-600">5+</div>
+            <div className="text-sm text-green-700">Proyectos completados</div>
+          </div>
+          <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-4 border border-purple-200 hover:shadow-lg transition-shadow duration-300">
+            <div className="text-2xl font-bold text-purple-600">80%</div>
+            <div className="text-sm text-purple-700">Mejora en procesos</div>
           </div>
         </div>
 

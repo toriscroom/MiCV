@@ -7,7 +7,10 @@ export const profile = {
   linkedin: "https://linkedin.com/in/mtorisoto",
   github: "https://github.com/mtori",
   location: "Temuco, Chile",
-  summary: "Desarrollador Full Stack en formación con experiencia en optimización de procesos mediante soluciones tecnológicas. Capacidad demostrada en trabajo colaborativo y desarrollo de aplicaciones móviles con impacto social. Actualmente cursando último año de Ingeniería Civil en Informática con mención en Desarrollo de Software."
+  summary: "Desarrollador Full Stack en formación con experiencia en optimización de procesos mediante soluciones tecnológicas. Capacidad demostrada en trabajo colaborativo y desarrollo de aplicaciones móviles con impacto social. Actualmente cursando último año de Ingeniería Civil en Informática con mención en Desarrollo de Software.",
+  yearsOfExperience: 3,
+  projectsCompleted: 5,
+  processImprovement: 80
 };
 
 export const experience = [
@@ -24,6 +27,13 @@ export const experience = [
     role: "Ayudante en procesos de informática",
     period: "2019",
     description: "Capacitación en fórmulas de Excel y optimización de procesos para mejorar la eficiencia del equipo. Realicé mantención general a los computadores de la oficina."
+  },
+  {
+    id: 3,
+    company: "Chilena Consolidada",
+    role: "Practicante - Técnico en Administración de Empresas con mención en RRHH",
+    period: "Noviembre 2017 - Enero 2018",
+    description: "Práctica de enseñanza media para obtener el título de técnico nivel medio. Responsable de ordenar la producción de un corredor de seguros y optimizar las entradas de pólizas al sistema."
   }
 ];
 
