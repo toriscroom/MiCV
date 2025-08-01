@@ -5,7 +5,7 @@ export const profile = {
   title: "Desarrollador Full Stack en Formación | Ing. Civil en Informática",
   mail: "mba.torisoto@gmail.com",
   linkedin: "https://linkedin.com/in/mtorisoto",
-  github: "https://github.com/mtori",
+  github: "https://github.com/toriscroom",
   location: "Temuco, Chile",
   summary: "Desarrollador Full Stack en formación con experiencia en optimización de procesos mediante soluciones tecnológicas. Capacidad demostrada en trabajo colaborativo y desarrollo de aplicaciones móviles con impacto social. Actualmente cursando último año de Ingeniería Civil en Informática con mención en Desarrollo de Software.",
   yearsOfExperience: 3,
